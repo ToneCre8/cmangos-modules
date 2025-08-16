@@ -55,6 +55,14 @@ namespace cmangos_module
         }
     }
 
+    void ModuleMgr::OnSessionSendPacket(WorldPacket const& packet) 
+    {
+        for (Module* mod : modules)
+        {
+            mod->OnSessionSendPacket(packet);
+        }
+    }
+
     bool ModuleMgr::OnUseItem(Player* player, Item* item)
     {
         bool overriden = false;

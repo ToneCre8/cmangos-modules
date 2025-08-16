@@ -60,6 +60,9 @@ namespace cmangos_module
         void OnWorldInitialized();
         void OnWorldUpdated(uint32 elapsed);
 
+        //Session Hooks
+        void OnSessionSendPacket(WorldPacket const& packet);
+
         // Player Item Hooks
         bool OnUseItem(Player* player, Item* item);
         void OnSetVisibleItemSlot(Player* player, uint8 slot, Item* item);

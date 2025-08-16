@@ -98,6 +98,9 @@ namespace cmangos_module
         // Called every time the world updates
         virtual void OnWorldUpdated(uint32 elapsed) {}
 
+        //Session Hooks
+        virtual void OnSessionSendPacket(WorldPacket const& packet) {}
+
         // Player Item Hooks
         // Called when a player uses an item. Return true to override default logic
         virtual bool OnUseItem(Player* player, Item* item) { return false; }
