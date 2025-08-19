@@ -55,11 +55,11 @@ namespace cmangos_module
         }
     }
 
-    void ModuleMgr::OnSessionSendPacket(WorldPacket const& packet) 
+    void ModuleMgr::OnSessionSendPacket(WorldSession const& session, WorldPacket const& packet) 
     {
         for (Module* mod : modules)
         {
-            mod->OnSessionSendPacket(packet);
+            mod->OnSessionSendPacket(session, packet);
         }
     }
 

@@ -61,7 +61,7 @@ namespace cmangos_module
         void OnWorldUpdated(uint32 elapsed);
 
         //Session Hooks
-        void OnSessionSendPacket(WorldPacket const& packet);
+        void OnSessionSendPacket(WorldSession const& session, WorldPacket const& packet);
 
         // Player Item Hooks
         bool OnUseItem(Player* player, Item* item);
