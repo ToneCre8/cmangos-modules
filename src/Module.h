@@ -161,6 +161,8 @@ namespace cmangos_module
         virtual void OnDeleteFromDB(uint32 playerId) {}
 
         // Player Session Hooks
+        // // Called when a player logs in to the game
+        virtual void OnLogIn(Player* player) {}
         // Called when a player logs out of the game
         virtual void OnLogOut(Player* player) {}
         // Called before a new character is created

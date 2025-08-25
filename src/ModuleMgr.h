@@ -93,6 +93,7 @@ namespace cmangos_module
         void OnDeleteFromDB(uint32 playerId);
 
         // Player Session Hooks
+        void OnLogIn(Player* player);
         void OnLogOut(Player* player);
         void OnPreCharacterCreated(Player* player);
         void OnCharacterCreated(Player* player);

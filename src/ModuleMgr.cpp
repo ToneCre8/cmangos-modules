@@ -266,6 +266,14 @@ namespace cmangos_module
         }
     }
 
+    void ModuleMgr::OnLogIn(Player* player)
+    {
+        for (Module* mod : modules)
+        {
+            mod->OnLogIn(player);
+        }
+    }
+
     void ModuleMgr::OnLogOut(Player* player)
     {
         for (Module* mod : modules)
